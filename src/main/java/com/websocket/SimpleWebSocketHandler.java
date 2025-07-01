@@ -12,7 +12,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 @Component
 public class SimpleWebSocketHandler extends TextWebSocketHandler {
     
-    private final Set<WebSocketSession> sessions = Collections.synchronizedSet(new HashSet<>());
+    private final static Set<WebSocketSession> sessions = Collections.synchronizedSet(new HashSet<>());
     
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
